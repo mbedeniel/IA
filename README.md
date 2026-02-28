@@ -27,29 +27,13 @@ Dans ce projet, l'environnement a été entièrement modélisé sur mesure :
 
 🚀 Algorithmes Implémentés
 
-J'ai développé et comparé trois approches distinctes pour résoudre ce Processus de Décision de Markov (MDP) :
+J'ai développé et comparé trois approches distinctes pour résoudre ce Processus de Décision :
 
     Policy Iteration : Un algorithme Model-Based qui alterne entre l'évaluation de la politique actuelle et son amélioration jusqu'à convergence.
 
     Value Iteration : Une approche également Model-Based qui met directement à jour la valeur des états en utilisant l'opérateur d'optimalité de Bellman, convergeant plus rapidement que Policy Iteration.
 
     Q-learning (ε-Greedy) : Un algorithme Model-Free qui apprend par l'expérience. L'agent interagit avec l'environnement par essais et erreurs, en gérant le compromis Exploration vs Exploitation grâce au paramètre epsilon (ε).
-
-📊 Résultats et Comparaison
-
-Le projet inclut des outils de visualisation créés sur mesure (Heatmaps de la grille et graphiques d'évolution des valeurs d'états) pour analyser la convergence.
-
-Points clés de l'analyse :
-
-    Vitesse de convergence : Value Iteration s'est avéré le plus rapide (environ 7 itérations pour 0.5s d'exécution) comparé à Policy Iteration (~16 itérations, 4s). Cependant, Value Iteration est plus gourmand en mémoire.
-
-    Le compromis Exploration/Exploitation en Q-Learning :
-
-        Un ε faible (0.1) permet une convergence rapide (~16 épisodes) mais risque de bloquer l'agent dans une politique sous-optimale (états inexplorés).
-
-        Un ε modéré (0.3) offre le meilleur équilibre, permettant de trouver un chemin optimal (~13 actions pour le but) en un temps raisonnable (~82 épisodes).
-
-        Un ε élevé (0.7) favorise une exploration totale de la grille, mais ralentit drastiquement la convergence (Q-table instable car n'exploitant pas ses connaissances).
 
 💡 Compétences Acquises
 
